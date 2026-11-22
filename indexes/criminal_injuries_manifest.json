@@ -1,0 +1,25 @@
+{
+  "document_id": "criminal-injuries-compensation-scheme-2012-amended-2019",
+  "source_sha256": "a3d57aa551a5d353a5f9c8242fa4bbb831c9eda6b93a4a4370f1457078127b35",
+  "pipeline_version": 1,
+  "extraction_version": 2,
+  "embedding_model": "nlpaueb/legal-bert-base-uncased",
+  "embedding_pooling": "attention_masked_mean_including_special_tokens",
+  "embedding_normalized": false,
+  "record_count": 669,
+  "records_sha256": "88770bfe0b30ef57d52455910fe2c70b3daea04ba6ededb2216f2520585749f6",
+  "kinds": {
+    "rule": 148,
+    "section": 18,
+    "procedure": 1,
+    "tariff_entry": 393,
+    "tariff_note": 7,
+    "tariff_summary": 3,
+    "tariff_level": 35,
+    "annex": 4,
+    "multiplier": 60
+  },
+  "chunk_count": 672,
+  "chunk_ids_sha256": "9313a827406dc31765fb0395f0c83f9251c18ee55aeede518947a36e795de3a7",
+  "chunk_content_sha256": "7711186a0e67678dad91b274456d8538e2d4a6fd6992c61c99d7686b573bfb77"
+}

@@ -22,7 +22,6 @@ from decimal import Decimal
 from pathlib import Path
 
 import streamlit as st
-from dotenv import load_dotenv
 from langchain_community.retrievers import BM25Retriever
 from langchain_core.documents import Document
 from langchain_core.messages import HumanMessage, SystemMessage
@@ -451,8 +450,10 @@ def show_sources(message, key, debug):
 
 
 def main():
-    load_dotenv()
     st.set_page_config(page_title="Criminal Injuries Compensation Scheme Assistant", page_icon="📚")
+    with st.sidebar:
+        openai_api_key = st.text_input("OpenAI API Key", key="chatbot_api_key", type="password")
+        "[Get an OpenAI API key](https://platform.openai.com/account/api-keys)"
     st.title("Criminal Injuries Compensation Scheme Assistant")
     st.caption("Answers refer to the 2012 Scheme as amended on 13 June 2019. Check cited PDF passages; not legal advice.")
     debug = os.getenv("SCHEME_DEBUG", "0") == "1"
@@ -483,9 +484,8 @@ def main():
         st.markdown(question)
     with st.chat_message("assistant"):
         try:
-            api_key = os.getenv("OPENAI_API_KEY")
             # Constructing the client makes no API call; exact paths bypass it.
-            llm = get_llm(os.getenv("CHAT_MODEL", "gpt-6-luna"), api_key) if api_key else None
+            llm = get_llm(os.getenv("CHAT_MODEL", "gpt-6-luna"), openai_api_key) if openai_api_key else None
             with st.spinner("Checking the Scheme..."):
                 response = answer_question(engine, question, history, llm)
         except Exception as exc:

@@ -10,7 +10,7 @@ Scheme text and quoted passages are reproduced under the [Open Government Licenc
 
 [Criminal Injuries Compensation Scheme 2012 (amended) — GOV.UK](https://www.gov.uk/government/publications/criminal-injuries-compensation-scheme-2012-amended--2)
 
-## Setup and run
+## Setup and run locally
 
 Run the following commands from the project root.
 
@@ -20,7 +20,10 @@ Run the following commands from the project root.
    python -m venv venv
    .\venv\Scripts\Activate.ps1
    ```
-
+2. **Install dependencies**.
+   ```powershell
+   pip install -r requirements.txt
+   ```
 2. **Add the Scheme PDF.** Download the amended Scheme from the link above and save it as `data/criminal-injuries-compensation-scheme-2012.pdf`.
 
 3. **Prepare the retrieval artefacts.**

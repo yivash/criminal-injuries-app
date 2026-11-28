@@ -20,7 +20,7 @@ Run the following commands from the project root.
    python -m venv venv
    .\venv\Scripts\Activate.ps1
    ```
-2. **Install dependencies**.
+2. **Install dependencies.**
    ```powershell
    pip install -r requirements.txt
    ```
@@ -38,3 +38,6 @@ Run the following commands from the project root.
    ```powershell
    streamlit run ./src/app.py
    ```
+5. **Enter you OpenAI API key.**
+   Enter your key in the API key field in the Streamlit app to start chatting with the assistant. The app uses your key to request answers from OpenAI. It does not save or track your key.
+   <img width="1468" height="957" alt="image" src="https://github.com/user-attachments/assets/96b2e9ad-8b97-4573-b232-7bdf8fe52321" />
